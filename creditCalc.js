@@ -130,7 +130,7 @@ function validateFields(){
 	var checkEndDay = getEndDay();
 	var checkEndMonth = getEndMonth();
 
-	if(checkPackage == "--select package--" || checkComponant == "--select componant--" || checkIssue == "--select issue--" || isNaN(checkStartDay) || isNaN(checkStartMonth) || isNaN(checkEndDay) || isNaN(checkEndMonth)){
+	if(checkPackage == "-select package-" || checkComponant == "-select componant-" || checkIssue == "-select issue-" || isNaN(checkStartDay) || isNaN(checkStartMonth) || isNaN(checkEndDay) || isNaN(checkEndMonth)){
 		return false;
 	} else {
 		return true;
