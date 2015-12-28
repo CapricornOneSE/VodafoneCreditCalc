@@ -1,0 +1,61 @@
+body {
+    font-family: vodafoneFont;
+    background-color: #A00000;
+}
+
+table.center {
+	margin-left:auto; 
+	margin-right:auto;
+	width: 500px;
+}
+
+select {
+	width: 182px;
+	height: 32px;
+	text-align: center;
+	font-size: 14px;
+	font-family: vodafoneFont;
+	background-color: white;
+}
+
+select > .placeholder {
+	display: none;
+}
+
+input.date {
+	width: 50px;
+	height: 32px;
+	text-align: center;
+	font-size: 14px;
+	font-family: vodafoneFont;
+}
+
+h1 {
+    color: white;
+}
+
+#container {
+	background-color: #EE231F;
+	position: absolute;
+	text-align: center;
+	height: 820px;
+	width: 600px;
+	top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#submit {
+	padding-top: 25px;
+}
+
+#footerImage {
+	text-align: right;
+}
+
+@font-face {
+    font-family: vodafoneFont;
+    src: url(font/Aller_Std_Rg.ttf);
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Best Start Credit Calculator</title>
+	<link rel="shortcut icon" href="pics/Vodafone.ico" />
+	<link rel="stylesheet" type="text/css" href="calc.css">
+</head>
+<body>
+	<div id="container">
+		<h1><u>credit calculator</u></h1>
+		<form method="POST" action="#" onsubmit="return calcTotal()">
+			<table class="center">
+				<tr>
+					<td align="left">
+						<h1>package?</h1>
+					</td>
+					<td align="right">
+						<select id="package" onchange="refreshComponantList(); getPackage();">
+							<option class="placeholder">--select package--</option>
+							<option value="simply">simply broadband</option>
+							<option value="essentials">home essentials</option>
+							<option value="ultimate">home ultimate</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h1>componant?</h1>
+					</td>
+					<td align="right">
+						<select id="componant" onchange="getComponant();">
+							<option class="placeholder">--select componant--</option>
+							<option value="ll">phone</option>
+							<option value="bb">broadband</option>
+							<option value="both">both</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h1>issue?</h1>
+					</td>
+					<td align="right">
+						<select id="issue" onchange="getIssue();">
+							<option class="placeholder">--select issue--</option>
+							<option value="complete">complete loss</option>
+							<option value="intermittent">intermittent</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h1>date reported?</h1>
+					</td>
+					<td align="right">
+						<input class="date" type="text" name="sDay" id="sDay" placeholder="dd" onchange="getStartDay();">
+						<input class="date" type="text" name="sMonth" id="sMonth" placeholder="mm" onchange="getStartMonth();">
+						<input class="date" type="text" name="sYear" id="sYear" placeholder="yy">
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h1>date resolved?</h1>
+					</td>
+					<td align="right">
+						<input class="date" type="text" name="rDay" id="rDay" placeholder="dd" onchange="getEndDay();">
+						<input class="date" type="text" name="rMonth" id="rMonth" placeholder="mm" onchange="getEndMonth();">
+						<input class="date" type="text" name="rYear" id="rYear" placeholder="yy">
+					</td>
+				</tr>
+
+			</table>
+
+			<div id="submit">
+				<input type="image" src="pics/calculate2.png" alt="submit"/>
+			</div>
+		</form>
+
+		<div id="footerImage">
+			<img src="pics/vodafone-logo1.png"/>
+		</div>
+	</div>
+	<script type="text/javascript" src="creditCalc.js"></script>
+</body>
+</html>
