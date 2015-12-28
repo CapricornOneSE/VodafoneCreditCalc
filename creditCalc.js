@@ -51,30 +51,30 @@ function calcTotal(){
 	var chosenIssue = getIssue();
 	var adjustment = 0;
 
-	if(startMonth == endMonth){
-		adjustment += packagePrice / daysInFirstMonth * ((endDay - startDay) + 1);
-	} else {
-		while(startMonth != endMonth){
-			adjustment += packagePrice / daysInFirstMonth * daysInFirstMonth;
-			startMonth ++;
-			if(startMonth == 13){
-				startMonth = 1;
-			}
-		}
-		adjustment += packagePrice / daysInEndMonth * endDay;
-	}
-
-	if(chosenIssue == "intermittent"){
-		adjustment = adjustment / 2;
-	}
-
 	if(validateFields()){
+		if(startMonth == endMonth){
+			adjustment += packagePrice / daysInFirstMonth * ((endDay - startDay) + 1);
+		} else {
+			while(startMonth != endMonth){
+				adjustment += packagePrice / daysInFirstMonth * daysInFirstMonth;
+				startMonth ++;
+				if(startMonth == 13){
+					startMonth = 1;
+				}
+			}
+			adjustment += packagePrice / daysInEndMonth * endDay;
+		}
+
+		if(chosenIssue == "intermittent"){
+			adjustment = adjustment / 2;
+		}
 		alert("Adjustment due: €" + (Math.round(adjustment * 100) / 100));
 		return true;
 	} else {
 		alert("Please complete the remaining fields");
 		return false;
 	}
+	alert(adjustment);
 }
 
 function getNewPackage(){
