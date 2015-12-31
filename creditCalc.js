@@ -56,7 +56,7 @@ function calcTotal(){
 			adjustment += packagePrice / daysInFirstMonth * ((endDay - startDay) + 1);
 		} else {
 			while(startMonth != endMonth){
-				adjustment += packagePrice / daysInFirstMonth * daysInFirstMonth;
+				adjustment += packagePrice / daysInFirstMonth * (daysInFirstMonth - startDay);
 				startMonth ++;
 				if(startMonth == 13){
 					startMonth = 1;
